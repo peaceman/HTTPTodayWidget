@@ -13,7 +13,35 @@
 		BE02CBF91BFE54FF0091A8CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE02CBF71BFE54FF0091A8CF /* Main.storyboard */; };
 		BE02CBFB1BFE54FF0091A8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE02CBFA1BFE54FF0091A8CF /* Assets.xcassets */; };
 		BE02CBFE1BFE54FF0091A8CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE02CBFC1BFE54FF0091A8CF /* LaunchScreen.storyboard */; };
+		BE02CC0C1BFE55FC0091A8CF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE02CC0B1BFE55FC0091A8CF /* NotificationCenter.framework */; };
+		BE02CC101BFE55FC0091A8CF /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE02CC0F1BFE55FC0091A8CF /* TodayViewController.m */; };
+		BE02CC131BFE55FC0091A8CF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE02CC111BFE55FC0091A8CF /* MainInterface.storyboard */; };
+		BE02CC171BFE55FC0091A8CF /* HTTP Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE02CC091BFE55FC0091A8CF /* HTTP Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE02CC151BFE55FC0091A8CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE02CBE31BFE54FF0091A8CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE02CC081BFE55FC0091A8CF;
+			remoteInfo = "HTTP Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE02CC1B1BFE55FC0091A8CF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BE02CC171BFE55FC0091A8CF /* HTTP Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BE02CBEB1BFE54FF0091A8CF /* HTTPTodayWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPTodayWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +54,12 @@
 		BE02CBFA1BFE54FF0091A8CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE02CBFD1BFE54FF0091A8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE02CBFF1BFE54FF0091A8CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE02CC091BFE55FC0091A8CF /* HTTP Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HTTP Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE02CC0B1BFE55FC0091A8CF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BE02CC0E1BFE55FC0091A8CF /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		BE02CC0F1BFE55FC0091A8CF /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		BE02CC121BFE55FC0091A8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		BE02CC141BFE55FC0091A8CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +70,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE02CC061BFE55FC0091A8CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02CC0C1BFE55FC0091A8CF /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -43,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				BE02CBED1BFE54FF0091A8CF /* HTTPTodayWidget */,
+				BE02CC0D1BFE55FC0091A8CF /* HTTP Widget */,
+				BE02CC0A1BFE55FC0091A8CF /* Frameworks */,
 				BE02CBEC1BFE54FF0091A8CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BE02CBEB1BFE54FF0091A8CF /* HTTPTodayWidget.app */,
+				BE02CC091BFE55FC0091A8CF /* HTTP Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +124,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BE02CC0A1BFE55FC0091A8CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE02CC0B1BFE55FC0091A8CF /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE02CC0D1BFE55FC0091A8CF /* HTTP Widget */ = {
+			isa = PBXGroup;
+			children = (
+				BE02CC0E1BFE55FC0091A8CF /* TodayViewController.h */,
+				BE02CC0F1BFE55FC0091A8CF /* TodayViewController.m */,
+				BE02CC111BFE55FC0091A8CF /* MainInterface.storyboard */,
+				BE02CC141BFE55FC0091A8CF /* Info.plist */,
+			);
+			path = "HTTP Widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +153,34 @@
 				BE02CBE71BFE54FF0091A8CF /* Sources */,
 				BE02CBE81BFE54FF0091A8CF /* Frameworks */,
 				BE02CBE91BFE54FF0091A8CF /* Resources */,
+				BE02CC1B1BFE55FC0091A8CF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BE02CC161BFE55FC0091A8CF /* PBXTargetDependency */,
 			);
 			name = HTTPTodayWidget;
 			productName = HTTPTodayWidget;
 			productReference = BE02CBEB1BFE54FF0091A8CF /* HTTPTodayWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BE02CC081BFE55FC0091A8CF /* HTTP Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE02CC181BFE55FC0091A8CF /* Build configuration list for PBXNativeTarget "HTTP Widget" */;
+			buildPhases = (
+				BE02CC051BFE55FC0091A8CF /* Sources */,
+				BE02CC061BFE55FC0091A8CF /* Frameworks */,
+				BE02CC071BFE55FC0091A8CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HTTP Widget";
+			productName = "HTTP Widget";
+			productReference = BE02CC091BFE55FC0091A8CF /* HTTP Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +192,9 @@
 				ORGANIZATIONNAME = n2305;
 				TargetAttributes = {
 					BE02CBEA1BFE54FF0091A8CF = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					BE02CC081BFE55FC0091A8CF = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
@@ -127,6 +213,7 @@
 			projectRoot = "";
 			targets = (
 				BE02CBEA1BFE54FF0091A8CF /* HTTPTodayWidget */,
+				BE02CC081BFE55FC0091A8CF /* HTTP Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +226,14 @@
 				BE02CBFE1BFE54FF0091A8CF /* LaunchScreen.storyboard in Resources */,
 				BE02CBFB1BFE54FF0091A8CF /* Assets.xcassets in Resources */,
 				BE02CBF91BFE54FF0091A8CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02CC071BFE55FC0091A8CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02CC131BFE55FC0091A8CF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +250,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE02CC051BFE55FC0091A8CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02CC101BFE55FC0091A8CF /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE02CC161BFE55FC0091A8CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE02CC081BFE55FC0091A8CF /* HTTP Widget */;
+			targetProxy = BE02CC151BFE55FC0091A8CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE02CBF71BFE54FF0091A8CF /* Main.storyboard */ = {
@@ -172,6 +283,14 @@
 				BE02CBFD1BFE54FF0091A8CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BE02CC111BFE55FC0091A8CF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE02CC121BFE55FC0091A8CF /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,6 +400,28 @@
 			};
 			name = Release;
 		};
+		BE02CC191BFE55FC0091A8CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HTTP Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n2305.HTTPTodayWidget.HTTP-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BE02CC1A1BFE55FC0091A8CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HTTP Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n2305.HTTPTodayWidget.HTTP-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -298,6 +439,14 @@
 			buildConfigurations = (
 				BE02CC031BFE54FF0091A8CF /* Debug */,
 				BE02CC041BFE54FF0091A8CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE02CC181BFE55FC0091A8CF /* Build configuration list for PBXNativeTarget "HTTP Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE02CC191BFE55FC0091A8CF /* Debug */,
+				BE02CC1A1BFE55FC0091A8CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
