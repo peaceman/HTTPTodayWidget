@@ -60,6 +60,8 @@
 		BE02CC0F1BFE55FC0091A8CF /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		BE02CC121BFE55FC0091A8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		BE02CC141BFE55FC0091A8CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE02CC1E1C16363C0091A8CF /* HTTPTodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HTTPTodayWidget.entitlements; sourceTree = "<group>"; };
+		BE02CC1F1C1636720091A8CF /* HTTP Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "HTTP Widget.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		BE02CBED1BFE54FF0091A8CF /* HTTPTodayWidget */ = {
 			isa = PBXGroup;
 			children = (
+				BE02CC1E1C16363C0091A8CF /* HTTPTodayWidget.entitlements */,
 				BE02CBF11BFE54FF0091A8CF /* AppDelegate.h */,
 				BE02CBF21BFE54FF0091A8CF /* AppDelegate.m */,
 				BE02CBF41BFE54FF0091A8CF /* ViewController.h */,
@@ -135,6 +138,7 @@
 		BE02CC0D1BFE55FC0091A8CF /* HTTP Widget */ = {
 			isa = PBXGroup;
 			children = (
+				BE02CC1F1C1636720091A8CF /* HTTP Widget.entitlements */,
 				BE02CC0E1BFE55FC0091A8CF /* TodayViewController.h */,
 				BE02CC0F1BFE55FC0091A8CF /* TodayViewController.m */,
 				BE02CC111BFE55FC0091A8CF /* MainInterface.storyboard */,
@@ -193,9 +197,21 @@
 				TargetAttributes = {
 					BE02CBEA1BFE54FF0091A8CF = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = A3Q52D3C5M;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BE02CC081BFE55FC0091A8CF = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = A3Q52D3C5M;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -382,10 +398,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HTTPTodayWidget/HTTPTodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HTTPTodayWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.n2305.HTTPTodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -393,20 +413,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HTTPTodayWidget/HTTPTodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HTTPTodayWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.n2305.HTTPTodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		BE02CC191BFE55FC0091A8CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HTTP Widget/HTTP Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "HTTP Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.n2305.HTTPTodayWidget.HTTP-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -414,10 +442,14 @@
 		BE02CC1A1BFE55FC0091A8CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HTTP Widget/HTTP Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "HTTP Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.n2305.HTTPTodayWidget.HTTP-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

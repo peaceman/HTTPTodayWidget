@@ -9,6 +9,9 @@
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 
+NSString* const kApiEndPointUrl = @"ApiEndPointUrl";
+NSString* const kAppGroupName = @"group.com.n2305.HTTPTodayWidget";
+
 @interface TodayViewController () <NCWidgetProviding>
 
 @end
@@ -36,7 +39,11 @@
 }
 
 - (IBAction)triggerAction:(UIButton*)sender {
-    NSLog(@"triggerButton triggered");
+    NSLog(@"triggerButton triggered: %@", [[self getDefaults] stringForKey:kApiEndPointUrl]);
+}
+
+- (NSUserDefaults*)getDefaults {
+    return [[NSUserDefaults alloc] initWithSuiteName:kAppGroupName];
 }
 
 @end

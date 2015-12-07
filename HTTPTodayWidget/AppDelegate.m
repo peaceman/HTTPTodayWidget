@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+NSString* const kApiEndPointUrl = @"ApiEndPointUrl";
+NSString* const kAppGroupName = @"group.com.n2305.HTTPTodayWidget";
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ kApiEndPointUrl: @"https://foobar.local/just-do-it" }];
     return YES;
 }
 
