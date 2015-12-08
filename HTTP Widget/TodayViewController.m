@@ -40,6 +40,22 @@ NSString* const kAppGroupName = @"group.com.n2305.HTTPTodayWidget";
 
 - (IBAction)triggerAction:(UIButton*)sender {
     NSLog(@"triggerButton triggered: %@", [[self getDefaults] stringForKey:kApiEndPointUrl]);
+    
+    NSString * urlString = [[self getDefaults] stringForKey:kApiEndPointUrl];
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    
+    NSURLSessionConfiguration* defaultUrlSessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession* urlSession = [NSURLSession sessionWithConfiguration:defaultUrlSessionConfig];
+    [[urlSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"response %@", response);
+
+        if (error) {
+            NSLog(@"error %@", error);
+        }
+    }] resume];
 }
 
 - (NSUserDefaults*)getDefaults {

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -19,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="584-WT-Stg">
-                                <rect key="frame" x="32" y="8" width="256" height="21"/>
+                                <rect key="frame" x="32" y="8" width="256" height="29"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="homo?">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -38,10 +37,10 @@
                         </subviews>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="584-WT-Stg" secondAttribute="trailing" constant="16" id="5Lm-si-xkv"/>
-                            <constraint firstItem="584-WT-Stg" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="16" id="5gV-dJ-oKN"/>
-                            <constraint firstAttribute="bottom" secondItem="584-WT-Stg" secondAttribute="bottom" constant="8" id="BuE-0w-X7N"/>
-                            <constraint firstItem="584-WT-Stg" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="RV7-Ka-xzz"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="584-WT-Stg" secondAttribute="bottom" id="46J-nF-LPm"/>
+                            <constraint firstItem="584-WT-Stg" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="R5I-jC-TrU"/>
+                            <constraint firstAttribute="trailing" secondItem="584-WT-Stg" secondAttribute="trailing" constant="32" id="eLE-LF-u5s"/>
+                            <constraint firstItem="584-WT-Stg" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="32" id="fG5-Sg-t36"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
